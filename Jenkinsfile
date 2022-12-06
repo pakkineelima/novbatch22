@@ -13,7 +13,7 @@ pipeline {
     }
       stage('Run cloudformaiton stack') {
         steps{
-            withCredentials(['object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding']) {
+            withCredentials(['<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>']) {
     // some block
 }
              sh '''
