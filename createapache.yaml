@@ -9,7 +9,10 @@ Parameters:
     Default: t2.micro
     Description: deltacargotestinstance
     Type: String
-   region: us-east-2
+   region:
+     Default: us-east-2
+     Description: required region for cfn stack
+     Type: string
   keypair:
     Default: myfirstkeypair
     Description: Keypair dev instance
