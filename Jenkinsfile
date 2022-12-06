@@ -15,6 +15,7 @@ pipeline {
         steps{  
             sh '''
                 aws cloudformation create-stack --stack-name myteststack --template-body createapache.yaml
+                aws configure region=us-east-2
              '''
                }
       }
