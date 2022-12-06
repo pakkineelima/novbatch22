@@ -17,7 +17,6 @@ pipeline {
               sh '''
                 aws cloudformation create-stack --stack-name myteststack --template-body createapache.yaml
              '''
-    }
   }
 }
 }
