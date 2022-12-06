@@ -14,7 +14,7 @@ pipeline {
       stage('Run cloudformaiton stack') {
         steps{  
               sh '''
-                aws cloudformation create-stack --stack-name myteststack --template-body createapache.yaml --region us-east-2
+                aws cloudformation create-stack --stack-name myteststack --template-body createapache.yaml --region us-east-2 --aws_access_key_id AKIAUE7GVNDEOK2LLBTW --aws_secret_access_key 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 
               '''
   }
 }
