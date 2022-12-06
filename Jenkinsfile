@@ -13,7 +13,7 @@ pipeline {
     }
       stage('Run cloudformaiton stack') {
         steps{  
-           withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '	awscredentials', usernameVariable: '******', passwordVariable: '**********']]) {
+           withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'awscredentials', usernameVariable: 'iamuser', passwordVariable: '4N1L&Ff]!MUoR-D']]) {
               sh '''
                 aws cloudformation create-stack --stack-name myteststack --template-body createapache.yaml
              '''
