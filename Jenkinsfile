@@ -12,9 +12,10 @@ pipeline {
         }
     }
       stage('Run cloudformaiton stack') {
-        steps{  
+        steps{ 
+             withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '	awscredentials', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']])
               sh '''
-                aws cloudformation create-stack --stack-name myteststack --template-body createapache.yaml --region us-east-2 --aws_access_key_id AKIAUE7GVNDEOK2LLBTW --aws_secret_access_key 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 
+                aws cloudformation create-stack --stack-name myteststack --template-body createapache.yaml --region us-east-2 
               '''
   }
 }
