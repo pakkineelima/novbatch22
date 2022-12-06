@@ -11,7 +11,6 @@ pipeline {
             sh "ls -lat"
         }
     }
-    } 
       stage('Run cloudformaiton stack') {
         steps{  
            withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '	awscredentials', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
