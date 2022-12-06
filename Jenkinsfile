@@ -13,13 +13,12 @@ pipeline {
     }
       stage('Run cloudformaiton stack') {
         steps{
-            withCredentials(['<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>']) {
-    // some block
-}
+             withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '	awscredentials', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
              sh '''
                 aws cloudformation create-stack --stack-name myteststack --template-body createapache.yaml --region us-east-2 
               '''
   }
+}
 }
 }
 }
