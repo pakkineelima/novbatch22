@@ -9,8 +9,9 @@ Parameters:
     Default: t2.micro
     Description: deltacargotestinstance
     Type: String
+   region: us-east-2
   keypair:
-    Default: nov2022
+    Default: myfirstkeypair
     Description: Keypair dev instance
     Type: String
 Resources:
