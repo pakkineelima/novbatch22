@@ -4,8 +4,7 @@ pipeline {
       stage('Checkout external proj') {
         steps {
             git branch: 'main',
-                credentialsId: '9a3c51bc-3642-4ef6-bbdb-160d1099ac89',
-                url: 'https://github.com/vickey123/novbatch22.git'
+                url: 'https://github.com/pakkineelima/novbatch22.git'
 
             sh "ls -lat"
         }
