@@ -17,7 +17,7 @@ pipeline {
           with credentials([[
             $class: 'AmazonWebServicesCredentialsBinding',
             accessKeyVariable: 'AKIAUE7GVNDEOK2LLBTW'
-            secretKeyVariable: '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'
+            secretKeyVariable: '4nIu/wJF/niEt1pKWKAEJD69zrsSfnzKD8/eEnb0',
             credentialsId: '9369d669-390c-4526-b8f6-ea8ba4557a64'
           ]])
         }
